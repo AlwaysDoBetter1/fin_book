@@ -1,0 +1,8 @@
+<odoo>
+    <!-- Action -->
+    <record id="fin_book_pavlo" model="ir.actions.act_window">
+        <field name="name">Financial book</field>
+        <field name="res_model">fin.book.pavlo</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

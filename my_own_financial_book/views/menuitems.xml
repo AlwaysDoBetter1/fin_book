@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem
+        id="my_own_fin_book"
+        name="Constructor"
+        action="fin_book_pavlo"
+        sequence="51"
+        groups="base.group_system"
+    />
+
+</odoo>
