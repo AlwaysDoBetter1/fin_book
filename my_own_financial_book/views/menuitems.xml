@@ -1,9 +1,10 @@
 <odoo>
     <menuitem
         id="my_own_fin_book"
-        name="Constructor"
+        name="Financial book"
         action="fin_book_pavlo"
         sequence="51"
+        web_icon="my_own_financial_book,static/description/icon.png"
         groups="base.group_system"
     />
 

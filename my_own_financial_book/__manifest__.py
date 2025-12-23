@@ -9,6 +9,9 @@
     'author': "Pavlo",
     'data': [
         'security/ir.model.access.csv',
+
+        'views/actions.xml',
+        'views/menuitems.xml',
     ],
     'images': ["static/description/icon.png"],
     'demo': [],
