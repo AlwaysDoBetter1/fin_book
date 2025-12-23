@@ -4,6 +4,5 @@
         <field name="name">Financial book</field>
         <field name="res_model">fin.book.pavlo</field>
         <field name="view_mode">form</field>
-
     </record>
 </odoo>
