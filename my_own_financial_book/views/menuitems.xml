@@ -7,5 +7,4 @@
         web_icon="my_own_financial_book,static/description/icon.png"
         groups="base.group_system"
     />
-
 </odoo>
