@@ -2,3 +2,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from . import my_own_boook
+from . import books_stages
+from . import reading_books

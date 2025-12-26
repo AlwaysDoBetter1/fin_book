@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_fin_book_pavlo_user,access_fin_book_pavlo_user,model_fin_book_pavlo,base.group_user,1,1,1,1
+access_books_stage_user,access_books_stage_user,model_books_stage,base.group_user,1,1,1,1
+access_reading_book_pavlo_user,access_reading_book_pavlo_user,model_reading_book_pavlo,base.group_user,1,1,1,1
+
