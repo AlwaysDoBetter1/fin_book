@@ -1,6 +1,6 @@
 <odoo>
     <menuitem
-        id="my_own_fin_book"
+        id="menu_my_own_fin_book"
         name="Financial book"
         action="fin_book_pavlo"
         sequence="51"
@@ -9,10 +9,18 @@
     />
 
     <menuitem
-        id="books_which_should_be_readed"
+        id="menu_books_which_should_be_readed"
         name="Read Books"
         action="read_book_pavlo"
-        parent="my_own_fin_book"
+        parent="menu_my_own_fin_book"
         sequence="1"
+    />
+
+    <menuitem
+        id="menu_future_plans_pavlo"
+        name="Plans"
+        action="future_plans_pavlo"
+        parent="menu_my_own_fin_book"
+        sequence="2"
     />
 </odoo>
