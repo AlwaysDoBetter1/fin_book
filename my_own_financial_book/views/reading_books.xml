@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_reading_book_form" model="ir.ui.view">
+        <field name="name">reading.book.pavlo.form</field>
+        <field name="model">reading.book.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Reading Book">
+                <sheet>
+
+                    <group>
+                        <field name="name"/>
+                        <field name="author"/>
+                        <field name="comment"/>
+                        <field name="links"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reading_book_kanban" model="ir.ui.view">
+        <field name="name">reading.book.pavlo.kanban</field>
+        <field name="model">reading.book.pavlo</field>
+        <field name="arch" type="xml">
+            <kanban
+                default_group_by="books_stages"
+                class="o_kanban_small_column"
+                group_create="false">
+
+                <field name="name"/>
+                <field name="author"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_card">
+
+                            <div class="o_kanban_details">
+                                <strong>
+                                    <field name="name"/>
+                                </strong>
+
+                                <div class="text-muted mt4">
+                                    <field name="author"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+</odoo>

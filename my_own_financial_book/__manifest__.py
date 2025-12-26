@@ -12,6 +12,9 @@
 
         'views/actions.xml',
         'views/menuitems.xml',
+        'views/reading_books.xml',
+
+        'data/books_stages.xml',
     ],
     'images': ["static/description/icon.png"],
     'demo': [],

@@ -7,4 +7,12 @@
         web_icon="my_own_financial_book,static/description/icon.png"
         groups="base.group_system"
     />
+
+    <menuitem
+        id="books_which_should_be_readed"
+        name="Read Books"
+        action="read_book_pavlo"
+        parent="my_own_fin_book"
+        sequence="1"
+    />
 </odoo>

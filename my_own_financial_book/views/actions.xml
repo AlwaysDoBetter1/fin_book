@@ -5,4 +5,10 @@
         <field name="res_model">fin.book.pavlo</field>
         <field name="view_mode">form</field>
     </record>
+
+    <record id="read_book_pavlo" model="ir.actions.act_window">
+        <field name="name">Reading book</field>
+        <field name="res_model">reading.book.pavlo</field>
+        <field name="view_mode">kanban,form</field>
+    </record>
 </odoo>
