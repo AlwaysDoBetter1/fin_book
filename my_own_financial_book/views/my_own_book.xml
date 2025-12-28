@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_fin_book_pavlo_form" model="ir.ui.view">
+        <field name="name">fin.book.pavlo.form</field>
+        <field name="model">fin.book.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Financial Book">
+                <header>
+                    <button
+                            name="create_invoice_wizard"
+                            string="Invoice"
+                            type="object"
+                            class="btn-primary"
+                    />
+                    <button
+                            name="create_expense_wizard"
+                            string="Expense"
+                            type="object"
+                            class="btn-secondary"
+                    />
+                </header>
+                <sheet>
+                    <group col="2">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="expense_sum"/>
+                            <field name="invoice_sum"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Invoices">
+                            <field name="fin_invoices"/>
+                        </page>
+
+                        <page string="Expenses">
+                            <field name="fin_expenses"/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

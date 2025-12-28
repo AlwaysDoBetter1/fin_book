@@ -1,0 +1,36 @@
+<odoo>
+
+    <!-- LIST -->
+    <record id="view_fin_expense_list" model="ir.ui.view">
+        <field name="name">fin.expense.list</field>
+        <field name="model">fin.expense</field>
+        <field name="arch" type="xml">
+            <list create="0">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="amount"/>
+                <field name="category"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- FORM -->
+    <record id="view_fin_expense_form" model="ir.ui.view">
+        <field name="name">fin.expense.form</field>
+        <field name="model">fin.expense</field>
+        <field name="arch" type="xml">
+            <form string="Expense">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="amount"/>
+                        <field name="category"/>
+                        <field name="book_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

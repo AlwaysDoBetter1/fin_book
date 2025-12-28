@@ -3,7 +3,7 @@
     <record id="fin_book_pavlo" model="ir.actions.act_window">
         <field name="name">Financial book</field>
         <field name="res_model">fin.book.pavlo</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <record id="read_book_pavlo" model="ir.actions.act_window">

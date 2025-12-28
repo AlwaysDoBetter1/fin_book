@@ -13,6 +13,12 @@
         'views/actions.xml',
         'views/menuitems.xml',
         'views/reading_books.xml',
+        'views/my_own_book.xml',
+        'views/fin_invoices.xml',
+        'views/fin_expenses.xml',
+
+        'wizards/expense_wizard.xml',
+        'wizards/invoice_wizard.xml',
 
         'data/books_stages.xml',
     ],
