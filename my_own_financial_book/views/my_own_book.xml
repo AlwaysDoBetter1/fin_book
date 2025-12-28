@@ -26,6 +26,7 @@
                         <group>
                             <field name="expense_sum"/>
                             <field name="invoice_sum"/>
+                            <field name="total"/>
                         </group>
                     </group>
 

@@ -5,8 +5,9 @@
         <field name="arch" type="xml">
             <form string="Add Expense" dialog="true">
                 <sheet>
+                    <h1 style="text-align: center" class="display-6 mb24">Expense</h1>
                     <group>
-                        <field name="name"/>
+                        <field name="name" readonly="1"/>
                         <field name="date"/>
                         <field name="amount"/>
                     </group>

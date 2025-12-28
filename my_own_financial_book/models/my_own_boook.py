@@ -9,15 +9,11 @@ class MyOwnFinbook(models.Model):
 
     date = fields.Date("Date", readonly=True)
 
-    currency_id = fields.Many2one(
-        "res.currency",
-        string="Currency",
-        default=lambda self: self.env.company.currency_id,
-    )
+    expense_sum =fields.Float("Expense amount", compute="_compute_expense_sum")
 
-    expense_sum =fields.Monetary("Expense amount", currency_field="currency_id", compute="_compute_expense_sum")
+    invoice_sum = fields.Float("Invoice amount", compute="_compute_invoice_sum")
 
-    invoice_sum = fields.Monetary("Invoice amount", currency_field="currency_id", compute="_compute_invoice_sum")
+    total = fields.Float("Total", compute="_compute_total")
 
     fin_invoices = fields.One2many("fin.invoice", "book_id", string="Invoices")
 
@@ -33,14 +29,22 @@ class MyOwnFinbook(models.Model):
         for rec in self:
             rec.invoice_sum = sum(rec.fin_invoices.mapped('amount'))
 
+    @api.depends('invoice_sum', 'expense_sum')
+    def _compute_total(self):
+        for rec in self:
+            rec.total = (rec.invoice_sum or 0.0) - (rec.expense_sum or 0.0)
+
     def create_invoice_wizard(self):
         return {
             "type": "ir.actions.act_window",
             "name": "Add invoice",
-            "res_model": "fin.expense.wizard.pavlo",
+            "res_model": "fin.invoice.wizard.pavlo",
             "view_mode": "form",
             "target": "new",
-            # "context": ctx,
+            "context": {
+                "default_name": self.name,
+                "active_id": self.id,
+            },
         }
 
     def create_expense_wizard(self):
@@ -50,7 +54,10 @@ class MyOwnFinbook(models.Model):
             "res_model": "fin.expense.wizard.pavlo",
             "view_mode": "form",
             "target": "new",
-            # "context": ctx,
+            "context": {
+                "default_name": self.name,
+                "active_id": self.id,
+            },
         }
 
 
