@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_english_dictionary_list" model="ir.ui.view">
+        <field name="name">english.dictionary.list</field>
+        <field name="model">english.dictionary</field>
+        <field name="arch" type="xml">
+            <list string="English Dictionary" editable="bottom">
+                <field name="name"/>
+                <field name="transcription"/>
+                <field name="translation"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_english_dictionary_form" model="ir.ui.view">
+        <field name="name">english.dictionary.form</field>
+        <field name="model">english.dictionary</field>
+        <field name="arch" type="xml">
+            <form string="English Word">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="transcription"/>
+                        <field name="translation"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

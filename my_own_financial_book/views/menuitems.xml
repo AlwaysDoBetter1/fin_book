@@ -19,8 +19,39 @@
     <menuitem
         id="menu_future_plans_pavlo"
         name="Plans"
-        action="future_plans_pavlo"
         parent="menu_my_own_fin_book"
         sequence="2"
+    />
+
+    <menuitem
+        id="plans_of_learning"
+        name="Plans of learning"
+        action="future_plans_pavlo"
+        parent="menu_future_plans_pavlo"
+        sequence="1"
+    />
+
+    <menuitem
+        id="plans_of_todo"
+        name="#ToDo"
+        action="future_plans_pavlo"
+        parent="menu_future_plans_pavlo"
+        sequence="2"
+    />
+
+    <menuitem
+        id="plans_of_boughts"
+        name="Future Boughts"
+        action="future_plans_pavlo"
+        parent="menu_future_plans_pavlo"
+        sequence="3"
+    />
+
+    <menuitem
+        id="menu_english_dictionary"
+        name="English"
+        action="english_dictionary"
+        parent="menu_my_own_fin_book"
+        sequence="3"
     />
 </odoo>

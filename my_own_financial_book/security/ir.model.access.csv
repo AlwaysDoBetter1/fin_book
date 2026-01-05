@@ -9,3 +9,7 @@ access_fin_invoice_user,access_fin_invoice_user,model_fin_invoice,base.group_use
 access_fin_expense_user,access_fin_expense_user,model_fin_expense,base.group_user,1,1,1,1
 access_fin_invoice_wizard_pavlo_user,access_fin_invoice_wizard_pavlo_user,model_fin_invoice_wizard_pavlo,base.group_user,1,1,1,1
 access_fin_expense_wizard_pavlo_user,access_fin_expense_wizard_pavlo_user,model_fin_expense_wizard_pavlo,base.group_user,1,1,1,1
+
+access_expense_category_user,access_expense_category_user,model_expense_category,base.group_user,1,1,1,1
+access_invoice_category_user,access_invoice_category_user,model_invoice_category,base.group_user,1,1,1,1
+access_english_dictionary_user,access_english_dictionary_user,model_english_dictionary,base.group_user,1,1,1,1

@@ -7,3 +7,6 @@ from . import reading_books
 from . import future_plans
 from . import fin_expenses
 from . import fin_invoices
+from . import category_expenses
+from . import category_invoices
+from . import dictionary

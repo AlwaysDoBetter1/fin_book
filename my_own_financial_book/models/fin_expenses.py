@@ -15,4 +15,4 @@ class FinExpense(models.Model):
 
     date = fields.Date(string="Expense Date", default=fields.Date.context_today)
     amount = fields.Float(string="Amount", digits=(16, 2))
-    category = fields.Char(string="Category")
+    category = fields.Many2one('expense.category', string="Category", ondelete="cascade")

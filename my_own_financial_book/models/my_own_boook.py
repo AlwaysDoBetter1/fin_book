@@ -5,7 +5,7 @@ class MyOwnFinbook(models.Model):
     _name = "fin.book.pavlo"
     _description = "My own Financial Book"
 
-    name = fields.Char("Month", readonly=True)
+    name = fields.Char("Month")
 
     date = fields.Date("Date", readonly=True)
 
