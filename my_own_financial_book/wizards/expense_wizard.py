@@ -5,10 +5,11 @@ class FinExpenseWizard(models.TransientModel):
     _name = "fin.expense.wizard.pavlo"
     _description = "Financial Expense Wizard"
 
-    name = fields.Char(string="Expense Month", required=True)
+    name = fields.Char(string="Expense Type", required=True)
 
     date = fields.Date(string="Expense Date", default=fields.Date.context_today)
     amount = fields.Float(string="Amount", digits=(16, 2))
+    category = fields.Many2one('expense.category', string="Category", ondelete="cascade")
 
     def action_confirm(self):
         self.ensure_one()

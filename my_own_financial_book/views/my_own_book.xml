@@ -19,14 +19,19 @@
                     />
                 </header>
                 <sheet>
-                    <group col="2">
+                    <group col="3">
                         <group>
                             <field name="name" readonly="1"/>
+                            <field name="manual_amount"/>
+                            <field name="total_with_manual"/>
                         </group>
                         <group>
                             <field name="expense_sum"/>
                             <field name="invoice_sum"/>
                             <field name="total"/>
+                        </group>
+                        <group name="Expenses Chart">
+                            <field name="expense_chart" widget="expense_pie_chart" nolabel="1"/>
                         </group>
                     </group>
 
@@ -39,7 +44,6 @@
                         <page string="Expenses">
                             <field name="fin_expenses"/>
                         </page>
-
                     </notebook>
 
                 </sheet>

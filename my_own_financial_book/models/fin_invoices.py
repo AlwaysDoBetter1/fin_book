@@ -15,3 +15,4 @@ class FinInvoice(models.Model):
 
     date = fields.Date(string="Invoice Date", default=fields.Date.context_today)
     amount = fields.Float(string="Amount", digits=(16, 2))
+    category = fields.Many2one('invoice.category', string="Category", ondelete="cascade")

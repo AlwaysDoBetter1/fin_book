@@ -22,6 +22,7 @@
         'wizards/invoice_wizard.xml',
 
         'data/books_stages.xml',
+        'data/invoice_categories.xml',
     ],
     'images': ["static/description/icon.png"],
     'demo': [],
@@ -29,6 +30,9 @@
     'installable': True,
     'assets': {
         'web.assets_backend': [
+            'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js',
+            'my_own_financial_book/static/src/js/expense_pie_chart.js',
+            'my_own_financial_book/static/src/xml/expense_pie_chart.xml',
         ]
     },
 
