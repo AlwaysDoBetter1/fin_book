@@ -93,10 +93,16 @@
     />
 
     <menuitem
-        id="menu_author_pavlo"
+        id="menu_settings"
+        name="Settings"
+        sequence="99"
+    />
+
+    <menuitem
+        id="menu_authors"
         name="Authors"
         action="author_pavlo"
-        parent="menu_my_own_fin_book"
-        sequence="99"
+        parent="menu_settings"
+        sequence="1"
     />
 </odoo>
