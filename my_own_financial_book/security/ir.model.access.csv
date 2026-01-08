@@ -3,7 +3,9 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_fin_book_pavlo_user,access_fin_book_pavlo_user,model_fin_book_pavlo,base.group_user,1,1,1,1
 access_books_stage_user,access_books_stage_user,model_books_stage,base.group_user,1,1,1,1
 access_reading_book_pavlo_user,access_reading_book_pavlo_user,model_reading_book_pavlo,base.group_user,1,1,1,1
-access_future_plans_pavlo_user,access_future_plans_pavlo_user,model_future_plans_pavlo,base.group_user,1,1,1,1
+access_learning_plans_pavlo_user,access_learning_plans_pavlo_user,model_learning_plans_pavlo,base.group_user,1,1,1,1
+access_todo_tasks_pavlo_user,access_todo_tasks_pavlo_user,model_todo_tasks_pavlo,base.group_user,1,1,1,1
+access_future_boughts_pavlo_user,access_future_boughts_pavlo_user,model_future_boughts_pavlo,base.group_user,1,1,1,1
 
 access_fin_invoice_user,access_fin_invoice_user,model_fin_invoice,base.group_user,1,1,1,1
 access_fin_expense_user,access_fin_expense_user,model_fin_expense,base.group_user,1,1,1,1

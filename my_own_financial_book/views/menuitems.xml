@@ -26,7 +26,7 @@
     <menuitem
         id="plans_of_learning"
         name="Plans of learning"
-        action="future_plans_pavlo"
+        action="learning_plans_pavlo"
         parent="menu_future_plans_pavlo"
         sequence="1"
     />
@@ -34,7 +34,7 @@
     <menuitem
         id="plans_of_todo"
         name="#ToDo"
-        action="future_plans_pavlo"
+        action="todo_tasks_pavlo"
         parent="menu_future_plans_pavlo"
         sequence="2"
     />
@@ -42,7 +42,7 @@
     <menuitem
         id="plans_of_boughts"
         name="Future Boughts"
-        action="future_plans_pavlo"
+        action="future_boughts_pavlo"
         parent="menu_future_plans_pavlo"
         sequence="3"
     />

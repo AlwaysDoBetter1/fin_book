@@ -12,9 +12,21 @@
         <field name="view_mode">kanban,form</field>
     </record>
 
-    <record id="future_plans_pavlo" model="ir.actions.act_window">
-        <field name="name">Future plans and ideas</field>
-        <field name="res_model">future.plans.pavlo</field>
+    <record id="learning_plans_pavlo" model="ir.actions.act_window">
+        <field name="name">Plans of learning</field>
+        <field name="res_model">learning.plans.pavlo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="todo_tasks_pavlo" model="ir.actions.act_window">
+        <field name="name">#ToDo</field>
+        <field name="res_model">todo.tasks.pavlo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="future_boughts_pavlo" model="ir.actions.act_window">
+        <field name="name">Future Boughts</field>
+        <field name="res_model">future.boughts.pavlo</field>
         <field name="view_mode">list,form</field>
     </record>
 
