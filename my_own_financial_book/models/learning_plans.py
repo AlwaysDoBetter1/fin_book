@@ -5,7 +5,12 @@ class LearningPlansPavlo(models.Model):
     _description = "Plans of learning"
 
     name = fields.Char("Name", required=True)
-    author = fields.Char("Author", required=True)
+    author_id = fields.Many2one(
+        "author.pavlo",
+        string="Author",
+        required=True,
+        default=lambda self: self.env["author.pavlo"].search([("name", "=", "Pavlo")], limit=1)
+    )
     comment = fields.Text("Comment")
     links = fields.Char("Links")
 

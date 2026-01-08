@@ -12,6 +12,7 @@
 
         'views/actions.xml',
         'views/menuitems.xml',
+        'views/author_pavlo.xml',
         'views/reading_books.xml',
         'views/my_own_book.xml',
         'views/fin_invoices.xml',
@@ -24,6 +25,7 @@
 
         'data/books_stages.xml',
         'data/invoice_categories.xml',
+        'data/author_pavlo.xml',
     ],
     'images': ["static/description/icon.png"],
     'demo': [],

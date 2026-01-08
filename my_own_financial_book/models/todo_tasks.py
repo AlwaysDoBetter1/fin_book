@@ -5,7 +5,21 @@ class TodoTasksPavlo(models.Model):
     _description = "#ToDo tasks"
 
     name = fields.Char("Name", required=True)
-    author = fields.Char("Author", required=True)
+    author_id = fields.Many2one(
+        "author.pavlo",
+        string="Author",
+        required=True,
+        default=lambda self: self.env["author.pavlo"].search([("name", "=", "Pavlo")], limit=1)
+    )
+    status = fields.Selection(
+        selection=[
+            ('pending', 'Pending'),
+            ('done', 'Done'),
+        ],
+        string="Status",
+        default='pending',
+        required=True,
+    )
     comment = fields.Text("Comment")
     links = fields.Char("Links")
 

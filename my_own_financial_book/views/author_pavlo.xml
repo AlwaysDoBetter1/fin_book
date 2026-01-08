@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_author_pavlo_list" model="ir.ui.view">
+        <field name="name">author.pavlo.list</field>
+        <field name="model">author.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Authors">
+                <field name="name"/>
+                <field name="bio"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_author_pavlo_form" model="ir.ui.view">
+        <field name="name">author.pavlo.form</field>
+        <field name="model">author.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Author">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="bio"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+

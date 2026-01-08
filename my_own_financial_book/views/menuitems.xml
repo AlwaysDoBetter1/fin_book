@@ -24,27 +24,64 @@
     />
 
     <menuitem
+        id="plans_of_learning_header"
+        name="Plans of learning"
+        parent="menu_future_plans_pavlo"
+        sequence="1"
+    />
+
+    <menuitem
         id="plans_of_learning"
         name="Plans of learning"
         action="learning_plans_pavlo"
-        parent="menu_future_plans_pavlo"
+        parent="plans_of_learning_header"
         sequence="1"
     />
 
     <menuitem
         id="plans_of_todo"
         name="#ToDo"
-        action="todo_tasks_pavlo"
         parent="menu_future_plans_pavlo"
         sequence="2"
+    />
+
+    <menuitem
+        id="plans_of_todo_pending"
+        name="Pending"
+        action="todo_tasks_pavlo_pending"
+        parent="plans_of_todo"
+        sequence="1"
+    />
+
+    <menuitem
+        id="plans_of_todo_done"
+        name="Done"
+        action="todo_tasks_pavlo_done"
+        parent="plans_of_todo"
+        sequence="2"
+    />
+
+    <menuitem
+        id="plans_of_boughts_header"
+        name="Future Boughts"
+        parent="menu_future_plans_pavlo"
+        sequence="3"
     />
 
     <menuitem
         id="plans_of_boughts"
         name="Future Boughts"
         action="future_boughts_pavlo"
-        parent="menu_future_plans_pavlo"
-        sequence="3"
+        parent="plans_of_boughts_header"
+        sequence="1"
+    />
+
+    <menuitem
+        id="expensive_plans_of_boughts"
+        name="Expensive Goals"
+        action="future_boughts_pavlo"
+        parent="plans_of_boughts_header"
+        sequence="2"
     />
 
     <menuitem
@@ -53,5 +90,13 @@
         action="english_dictionary"
         parent="menu_my_own_fin_book"
         sequence="3"
+    />
+
+    <menuitem
+        id="menu_author_pavlo"
+        name="Authors"
+        action="author_pavlo"
+        parent="menu_my_own_fin_book"
+        sequence="99"
     />
 </odoo>

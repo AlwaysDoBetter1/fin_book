@@ -1,5 +1,11 @@
 <odoo>
     <!-- Action -->
+    <record id="author_pavlo" model="ir.actions.act_window">
+        <field name="name">Authors</field>
+        <field name="res_model">author.pavlo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
     <record id="fin_book_pavlo" model="ir.actions.act_window">
         <field name="name">Financial book</field>
         <field name="res_model">fin.book.pavlo</field>
@@ -18,10 +24,18 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <record id="todo_tasks_pavlo" model="ir.actions.act_window">
-        <field name="name">#ToDo</field>
+    <record id="todo_tasks_pavlo_pending" model="ir.actions.act_window">
+        <field name="name">#ToDo - Pending</field>
         <field name="res_model">todo.tasks.pavlo</field>
         <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_pending': 1}</field>
+    </record>
+
+    <record id="todo_tasks_pavlo_done" model="ir.actions.act_window">
+        <field name="name">#ToDo - Done</field>
+        <field name="res_model">todo.tasks.pavlo</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_done': 1}</field>
     </record>
 
     <record id="future_boughts_pavlo" model="ir.actions.act_window">
