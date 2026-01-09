@@ -95,6 +95,7 @@
     <menuitem
         id="menu_settings"
         name="Settings"
+        parent="menu_my_own_fin_book"
         sequence="99"
     />
 
