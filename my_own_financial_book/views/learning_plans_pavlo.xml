@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Learning Plans Views -->
+    <record id="view_learning_plans_pavlo_tree" model="ir.ui.view">
+        <field name="name">learning.plans.pavlo.tree</field>
+        <field name="model">learning.plans.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Plans of Learning">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="comment"/>
+                <field name="links"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_learning_plans_pavlo_form" model="ir.ui.view">
+        <field name="name">learning.plans.pavlo.form</field>
+        <field name="model">learning.plans.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Learning Plan">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author_id"/>
+                        <field name="comment"/>
+                        <field name="links"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+

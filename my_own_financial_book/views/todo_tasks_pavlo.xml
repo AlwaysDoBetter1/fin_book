@@ -1,0 +1,66 @@
+<odoo>
+    <record id="view_todo_tasks_pavlo_tree_pending" model="ir.ui.view">
+        <field name="name">todo.tasks.pavlo.tree.pending</field>
+        <field name="model">todo.tasks.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Pending Tasks">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="comment"/>
+                <field name="links"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_todo_tasks_pavlo_tree_done" model="ir.ui.view">
+        <field name="name">todo.tasks.pavlo.tree.done</field>
+        <field name="model">todo.tasks.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Done Tasks">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="comment"/>
+                <field name="links"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_todo_tasks_pavlo_form" model="ir.ui.view">
+        <field name="name">todo.tasks.pavlo.form</field>
+        <field name="model">todo.tasks.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="ToDo Task">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author_id"/>
+                        <field name="status"/>
+                    </group>
+                    <group>
+                        <field name="comment"/>
+                        <field name="links"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_todo_tasks_pavlo_search" model="ir.ui.view">
+        <field name="name">todo.tasks.pavlo.search</field>
+        <field name="model">todo.tasks.pavlo</field>
+        <field name="arch" type="xml">
+            <search string="#ToDo Tasks">
+                <field name="name"/>
+                <field name="author_id"/>
+                <filter name="pending" string="Pending" domain="[('status', '=', 'pending')]"/>
+                <filter name="done" string="Done" domain="[('status', '=', 'done')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_status" string="Status" context="{'group_by': 'status'}"/>
+                    <filter name="group_by_author" string="Author" context="{'group_by': 'author_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>
+

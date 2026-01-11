@@ -18,7 +18,10 @@
         'views/fin_invoices.xml',
         'views/fin_expenses.xml',
         'views/dictionary.xml',
-        'views/future_plans_views.xml',
+        'views/learning_plans_pavlo.xml',
+        'views/todo_tasks_pavlo.xml',
+        'views/future_boughts_pavlo.xml',
+        'views/expensive_boughts_pavlo.xml',
 
         'wizards/expense_wizard.xml',
         'wizards/invoice_wizard.xml',

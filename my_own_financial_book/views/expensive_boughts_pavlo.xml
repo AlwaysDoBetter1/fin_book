@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Expensive Boughts Views -->
+    <record id="view_expensive_boughts_pavlo_tree" model="ir.ui.view">
+        <field name="name">expensive.boughts.pavlo.tree</field>
+        <field name="model">expensive.boughts.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Expensive Goals">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="is_active"/>
+                <field name="price"/>
+                <field name="paid"/>
+                <field name="remaining" sum="Total"/>
+                <field name="comment"/>
+                <field name="links"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_expensive_boughts_pavlo_form" model="ir.ui.view">
+        <field name="name">expensive.boughts.pavlo.form</field>
+        <field name="model">expensive.boughts.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Expensive Goal">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author_id"/>
+                        <field name="price"/>
+                        <field name="paid"/>
+                        <field name="remaining" readonly="1"/>
+                        <field name="is_active"/>
+                        <field name="comment"/>
+                        <field name="links"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+

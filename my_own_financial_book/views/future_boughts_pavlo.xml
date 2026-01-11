@@ -1,0 +1,35 @@
+<odoo>
+    <!-- Future Boughts Views -->
+    <record id="view_future_boughts_pavlo_tree" model="ir.ui.view">
+        <field name="name">future.boughts.pavlo.tree</field>
+        <field name="model">future.boughts.pavlo</field>
+        <field name="arch" type="xml">
+            <list string="Future Purchases">
+                <field name="name"/>
+                <field name="author_id"/>
+                <field name="price" sum="Total"/>
+                <field name="comment"/>
+                <field name="links"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_future_boughts_pavlo_form" model="ir.ui.view">
+        <field name="name">future.boughts.pavlo.form</field>
+        <field name="model">future.boughts.pavlo</field>
+        <field name="arch" type="xml">
+            <form string="Future Purchase">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author_id"/>
+                        <field name="price"/>
+                        <field name="comment"/>
+                        <field name="links"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+
