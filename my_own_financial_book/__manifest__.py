@@ -29,6 +29,7 @@
         'data/books_stages.xml',
         'data/invoice_categories.xml',
         'data/author_pavlo.xml',
+        'data/expense_categories.xml',
     ],
     'images': ["static/description/icon.png"],
     'demo': [],

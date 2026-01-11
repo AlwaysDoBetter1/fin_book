@@ -11,8 +11,7 @@
                 <field name="price"/>
                 <field name="paid"/>
                 <field name="remaining" sum="Total"/>
-                <field name="comment"/>
-                <field name="links"/>
+                <field name="months_planned"/>
             </list>
         </field>
     </record>
@@ -30,6 +29,7 @@
                         <field name="paid"/>
                         <field name="remaining" readonly="1"/>
                         <field name="is_active"/>
+                        <field name="months_planned"/>
                         <field name="comment"/>
                         <field name="links"/>
                     </group>

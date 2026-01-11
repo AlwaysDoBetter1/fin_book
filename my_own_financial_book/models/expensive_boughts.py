@@ -21,6 +21,7 @@ class ExpensiveBoughtsPavlo(models.Model):
         help="Remaining amount to pay (Price - Paid)"
     )
     is_active = fields.Boolean("Active", default=False)
+    months_planned = fields.Integer(string="Planned Months", required=True, default=12)
     comment = fields.Text("Comment")
     links = fields.Char("Links")
 
@@ -28,4 +29,3 @@ class ExpensiveBoughtsPavlo(models.Model):
     def _compute_remaining(self):
         for record in self:
             record.remaining = (record.price or 0.0) - (record.paid or 0.0)
-

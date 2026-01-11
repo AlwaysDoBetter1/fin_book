@@ -25,6 +25,7 @@
                             <field name="manual_amount"/>
                             <field name="total_with_manual"/>
                             <field name="expensive_goals_remaining" readonly="1"/>
+                            <field name="month_should_paid" readonly="1"/>
                         </group>
                         <group>
                             <field name="expense_sum"/>
@@ -46,7 +47,6 @@
                             <field name="fin_expenses"/>
                         </page>
                     </notebook>
-
                 </sheet>
             </form>
         </field>

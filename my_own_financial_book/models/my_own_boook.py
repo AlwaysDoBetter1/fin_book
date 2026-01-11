@@ -25,6 +25,8 @@ class MyOwnFinbook(models.Model):
 
     expensive_goals_remaining = fields.Float("Expensive Goals Remaining", compute="_compute_expensive_goals_remaining")
 
+    month_should_paid = fields.Float("Monthly Planned Payment", digits=(16, 2), compute="_compute_month_should_paid")
+
     expense_chart = fields.Char("Expense Chart", compute="_compute_expense_chart")
 
     @api.depends('fin_expenses.amount')
@@ -53,6 +55,17 @@ class MyOwnFinbook(models.Model):
         for rec in self:
             active_goals = ExpensiveBoughts.search([('is_active', '=', True)])
             rec.expensive_goals_remaining = sum(active_goals.mapped('remaining'))
+
+    @api.depends_context('uid')
+    def _compute_month_should_paid(self):
+        ExpensiveBoughts = self.env['expensive.boughts.pavlo']
+        for rec in self:
+            active_goals = ExpensiveBoughts.search([('is_active', '=', True)])
+            total_monthly = 0.0
+            for goal in active_goals:
+                months = goal.months_planned or 1
+                total_monthly += (goal.price or 0.0) / months
+            rec.month_should_paid = round(total_monthly, 2)
 
     def create_invoice_wizard(self):
         return {
