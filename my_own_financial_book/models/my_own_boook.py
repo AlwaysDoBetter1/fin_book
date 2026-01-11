@@ -23,6 +23,8 @@ class MyOwnFinbook(models.Model):
 
     fin_expenses = fields.One2many('fin.expense', 'book_id', string="Expenses")
 
+    expensive_goals_remaining = fields.Float("Expensive Goals Remaining", compute="_compute_expensive_goals_remaining")
+
     expense_chart = fields.Char("Expense Chart", compute="_compute_expense_chart")
 
     @api.depends('fin_expenses.amount')
@@ -44,6 +46,13 @@ class MyOwnFinbook(models.Model):
     def _compute_total_with_manual(self):
         for rec in self:
             rec.total_with_manual = (rec.total or 0.0) + (rec.manual_amount or 0.0)
+
+    @api.depends_context('uid')
+    def _compute_expensive_goals_remaining(self):
+        ExpensiveBoughts = self.env['expensive.boughts.pavlo']
+        for rec in self:
+            active_goals = ExpensiveBoughts.search([('is_active', '=', True)])
+            rec.expensive_goals_remaining = sum(active_goals.mapped('remaining'))
 
     def create_invoice_wizard(self):
         return {

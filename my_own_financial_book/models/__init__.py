@@ -8,6 +8,7 @@ from . import reading_books
 from . import learning_plans
 from . import todo_tasks
 from . import future_boughts
+from . import expensive_boughts
 from . import fin_expenses
 from . import fin_invoices
 from . import category_expenses

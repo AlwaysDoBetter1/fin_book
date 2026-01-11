@@ -79,7 +79,7 @@
     <menuitem
         id="expensive_plans_of_boughts"
         name="Expensive Goals"
-        action="future_boughts_pavlo"
+        action="expensive_boughts_pavlo"
         parent="plans_of_boughts_header"
         sequence="2"
     />

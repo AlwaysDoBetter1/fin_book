@@ -44,9 +44,16 @@
         <field name="view_mode">list,form</field>
     </record>
 
+    <record id="expensive_boughts_pavlo" model="ir.actions.act_window">
+        <field name="name">Expensive Goals</field>
+        <field name="res_model">expensive.boughts.pavlo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
     <record id="english_dictionary" model="ir.actions.act_window">
         <field name="name">English Dictionary</field>
         <field name="res_model">english.dictionary</field>
         <field name="view_mode">list,form</field>
     </record>
 </odoo>
+
