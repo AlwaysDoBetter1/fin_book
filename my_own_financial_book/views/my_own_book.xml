@@ -25,14 +25,14 @@
                             <field name="manual_amount"/>
                             <field name="total_with_manual"/>
                             <field name="expensive_goals_remaining" readonly="1"/>
-                            <field name="month_should_paid" readonly="1"/>
+                            <field name="month_should_paid" readonly="1" class="text-danger"/>
                             <field name="this_month_paid" readonly="1"/>
 
                             <field name="debt" readonly="1"/>
                         </group>
                         <group>
-                            <field name="expense_sum"/>
-                            <field name="invoice_sum"/>
+                            <field name="expense_sum" class="text-danger"/>
+                            <field name="invoice_sum" class="text-success"/>
                             <field name="total"/>
                         </group>
                         <group name="Expenses Chart">

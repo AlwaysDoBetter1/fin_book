@@ -27,6 +27,7 @@ class FinExpenseWizard(models.TransientModel):
             "date": self.date,
             "amount": self.amount,
             "book_id": book.id,
+            "category": self.category.id,
         })
 
         return {"type": "ir.actions.act_window_close"}
