@@ -4,6 +4,10 @@
         <record id="invoice_category_salary" model="invoice.category">
             <field name="name">Salary</field>
         </record>
+
+        <record id="invoice_category_correcting_balanse" model="invoice.category">
+            <field name="name">Correcting Balanse</field>
+        </record>
     </data>
 </odoo>
 
