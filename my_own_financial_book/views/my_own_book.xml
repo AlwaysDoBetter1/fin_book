@@ -21,7 +21,7 @@
                 <sheet>
                     <group col="3">
                         <group>
-                            <field name="name" readonly="1"/>
+                            <field name="name"/>
                             <field name="manual_amount"/>
                             <field name="total_with_manual"/>
                             <field name="expensive_goals_remaining" readonly="1"/>

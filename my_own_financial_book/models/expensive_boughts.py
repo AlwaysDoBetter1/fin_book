@@ -20,6 +20,13 @@ class ExpensiveBoughtsPavlo(models.Model):
         store=True,
         help="Remaining amount to pay (Price - Paid)"
     )
+    percents = fields.Float(
+        "Percents",
+        digits=(5, 2),
+        compute="_compute_percents",
+        store=True,
+        help="Percentage of paid from price"
+    )
     is_active = fields.Boolean("Active", default=False)
     months_planned = fields.Integer(string="Planned Months", required=True, default=12)
     comment = fields.Text("Comment")
@@ -29,3 +36,12 @@ class ExpensiveBoughtsPavlo(models.Model):
     def _compute_remaining(self):
         for record in self:
             record.remaining = (record.price or 0.0) - (record.paid or 0.0)
+
+    @api.depends("price", "paid")
+    def _compute_percents(self):
+        for record in self:
+            if record.price > 0:
+                record.percents = (record.paid / record.price) * 100
+            else:
+                record.percents = 0.0
+
